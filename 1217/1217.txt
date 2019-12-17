@@ -40,6 +40,7 @@ float fFireRate
 단어 사이에 _를 넣어서 표기하는 기법. 
 소문자만 사용하지만, Bash 변수, Java 상수에 사용되는 대문자 스네이크 표기법도 있습니다.
 
+ex)
 bool is_hardcore
 int max_stack
 int max_projectile_on_screen
