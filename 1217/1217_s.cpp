@@ -12,7 +12,17 @@ int main()
 	float fa = 1.1, fb = 2.53, fc = 3.53, fd = 4.3219, fe = -14.4214;
 	//float -> %f, double -> %lf
 	printf("%d %d %d %d %d\n", a, b, c, d, e);
-	printf("%.2f %.2f %.2f %.4f %.4f", fa, fb, fc, fd, fe);
+	printf("%.2f %.2f %.2f %.4f %.4f \n", fa, fb, fc, fd, fe);
+
+	int korean = 70, english = 80, math = 90;
+	int _total = 240;
+	float _average = 84.5;
+	char _grade = 'B';
+
+	printf("국어 : %d\n영어 : %d\n수학 : %d\n", korean, english, math);
+	printf("합계 : %d\n", _total);
+	printf("평균 : %.2f\n", _average);
+	printf("학점 : %c\n", _grade);
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
