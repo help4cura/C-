@@ -25,8 +25,16 @@ int main()
     //문제 3
     int meter = 2;
     float inch = 2.54;
-
+    cout << fixed; 
+    cout.precision(1);
     cout << meter << "m는 " << (int)((meter * 100) / inch) << "(" << ((meter * 100) / inch) << ")" << "inch입니다." << endl;
+
+    /* fixed -> 소수점 자리를 고정하는 함수
+       precision -> 전체 자릿수를 정하는 함수
+       예를 들어, 3.141592 라는 값이 있을 때,
+       precision(3) 일 경우, 3.141592의 세 자리까지인 3.14를 표현하지만
+       fixed를 사용하고 표현하게 될 경우, 소수점 세 자리까지인 3.141을 표현한다.
+    */
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
