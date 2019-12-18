@@ -17,7 +17,7 @@ int main()
     //문제 2
     int math = 70, english = 85;
     int sum = math + english;
-    int average = sum / 2;
+    float average = sum / 2.0; //부동 소수점 연산
     cout << "수학 점수 : " << math << "점" << endl;
     cout << "영어 점수 : " << english << "점" << endl;
     cout << "두 과목의 평균 점수는 " << average << "점입니다." << endl << endl;
