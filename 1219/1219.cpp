@@ -44,7 +44,7 @@ int main()
 
 	for (int attackCount = 5; attackCount > 0 && attackCount <= 5; attackCount--)
 	{
-		cout << "기술을 선택해주세요." << endl << "1. 약공격" << endl << "2. 강공격" << endl << "3. 검기발산" << endl << endl;
+		cout << "기술을 선택해주세요." << endl << "1. 약공격" << endl << "2. 강공격" << endl << "3. 루드 버스터" << endl << endl;
 		cout << "남은 공격 횟수 : " << attackCount << endl << endl;
 		cin >> attackType;
 
