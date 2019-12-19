@@ -51,7 +51,6 @@ int main()
 		if (attackType == 1 && mobHP > 0) {
 			damage = 100;
 			if (damage - defense <= 0) {
-				damage = 0;
 				cout << "몬스터의 공격 면역에 의해 공격이 무효화 되었습니다." << endl << endl;
 				cout << "몬스터의 남은 체력 : " << mobHP << endl << endl;
 			}
@@ -64,7 +63,6 @@ int main()
 		else if (attackType == 2 && mobHP > 0) {
 			damage = 200;
 			if (damage - defense <= 0) {
-				damage = 0;
 				cout << "몬스터의 공격 면역에 의해 공격이 무효화 되었습니다." << endl << endl;
 				cout << "몬스터의 남은 체력 : " << mobHP << endl << endl;
 			}
@@ -77,7 +75,6 @@ int main()
 		else if (attackType == 3 && mobHP > 0) {
 			damage = 877;
 			if (damage - defense <= 0) {
-				damage = 0;
 				cout << "몬스터의 공격 면역에 의해 공격이 무효화 되었습니다." << endl << endl;
 				cout << "몬스터의 남은 체력 : " << mobHP << endl << endl;
 			}
