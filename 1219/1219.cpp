@@ -32,8 +32,7 @@ int main()
 	}
 
 	//문제 2
-	int mobHP = 0, defense = 0, attackType = 0;
-	int damage = 0;
+	int mobHP = 0, damage = 0, defense = 0, attackType = 0;
 
 	if (difficulty == 1) { 
 		defense = 30; //난이도에 따른 공격 면역
