@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 	//문제 1
-	/*int level = 0;
+	int level = 0;
 
 	cin >> level;
 
@@ -22,8 +22,8 @@ int main()
 		cout << "중급던전 입장." << endl;
 	}
 	else if (level >= 100) {
-		cout << "엑스트라 던전 입장.";
-	}*/
+		cout << "엑스트라 던전 입장." << endl << endl;
+	}
 
 	//문제 2
 	int mobHP = 0, attackType = 0, damage = 0;
