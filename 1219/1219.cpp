@@ -11,13 +11,13 @@ int main()
 
 	cin >> level;
 
-	if (level < 0) {
+	if (level <= 0) {
 		cout << "허용 범위 값이 아님! 게임을 종료합니다." << endl;
 	}
 	else if (level < 10) {
 		cout << "초급던전에 입장합니다." << endl;
 	}
-	else if (level >= 10 && level < 99) {
+	else if (level >= 10 && level <= 99) {
 		cout << "중급던전에 입장합니다." << endl;
 		cout << "몬스터가 공격에 대한 적은 면역을 가집니다." << endl;
 		difficulty = 1; //난이도 설정
