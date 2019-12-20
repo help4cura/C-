@@ -15,7 +15,6 @@ int main()
 	cout << endl;
 
 	//문제 2
-
 	srand(time(NULL));
 
 	int player, computer = 0;
