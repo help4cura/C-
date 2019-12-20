@@ -18,49 +18,67 @@ int main()
 
 	srand(time(NULL));
 
-	int player, computer = 0;
+	int player = 0, computer = 0, matchCount = 0;
+	bool isWin = false;
 	//1 : 가위
 	//2 : 바위
 	//3 : 보
 
-	computer = rand() % 3 + 1;
+	while (isWin == false) {
 
-	cout << "가위바위보 게임에 오신 것을 환영합니다. 무엇을 내시겠습니까?" << endl << endl;
-	cout << "1. 가위, 2. 바위, 3. 보자기 : ";
+		computer = rand() % 3 + 1;
 
-	cin >> player;
+		cout << "가위바위보 게임에 오신 것을 환영합니다. 무엇을 내시겠습니까?" << endl << endl;
+		cout << "1. 가위, 2. 바위, 3. 보자기 : ";
 
-	if (player == 1 && computer == 1) {
-		cout << "당신은 가위를 냈고, 컴퓨터는 가위를 냈습니다. - DRAW" << endl << endl;
+		cin >> player;
+
+		if (player == 1 && computer == 1) {
+			cout << "당신은 가위를 냈고, 컴퓨터는 가위를 냈습니다. - DRAW" << endl << endl;
+			matchCount += 1;
+		}
+		else if (player == 1 && computer == 2) {
+			cout << "당신은 가위를 냈고, 컴퓨터는 바위를 냈습니다. - LOSE :(" << endl << endl;
+			matchCount += 1;
+		}
+		else if (player == 1 && computer == 3) {
+			cout << "당신은 가위를 냈고, 컴퓨터는 보자기를 냈습니다. - WIN !!" << endl << endl;
+			matchCount += 1;
+			isWin = true;
+		}
+		else if (player == 2 && computer == 1) {
+			cout << "당신은 바위를 냈고, 컴퓨터는 가위를 냈습니다. - WIN !!" << endl << endl;
+			matchCount += 1;
+			isWin = true;
+		}
+		else if (player == 2 && computer == 2) {
+			cout << "당신은 바위를 냈고, 컴퓨터는 바위를 냈습니다. - DRAW" << endl << endl;
+			matchCount += 1;
+		}
+		else if (player == 2 && computer == 3) {
+			cout << "당신은 바위를 냈고, 컴퓨터는 보자기를 냈습니다. - LOSE :(" << endl << endl;
+			matchCount += 1;
+		}
+		else if (player == 3 && computer == 1) {
+			cout << "당신은 보자기를 냈고, 컴퓨터는 가위를 냈습니다. - LOSE :(" << endl << endl;
+			matchCount += 1;
+		}
+		else if (player == 3 && computer == 2) {
+			cout << "당신은 보자기를 냈고, 컴퓨터는 바위를 냈습니다. - WIN !!" << endl << endl;
+			matchCount += 1;
+			isWin = true;
+		}
+		else if (player == 3 && computer == 3) {
+			cout << "당신은 보자기를 냈고, 컴퓨터는 보자기를 냈습니다. - DRAW" << endl << endl;
+			matchCount += 1;
+		}
+		else {
+			cout << "허용하지 않는 값이네요. 게임을 종료합니다.";
+			return 0;
+		}
 	}
-	else if (player == 1 && computer == 2) {
-		cout << "당신은 가위를 냈고, 컴퓨터는 바위를 냈습니다. - LOSE :(" << endl << endl;
-	}
-	else if (player == 1 && computer == 3) {
-		cout << "당신은 가위를 냈고, 컴퓨터는 보자기를 냈습니다. - WIN !!" << endl << endl;
-	}
-	else if (player == 2 && computer == 1) {
-		cout << "당신은 바위를 냈고, 컴퓨터는 가위를 냈습니다. - WIN !!" << endl << endl;
-	}
-	else if (player == 2 && computer == 2) {
-		cout << "당신은 바위를 냈고, 컴퓨터는 바위를 냈습니다. - DRAW" << endl << endl;
-	}
-	else if (player == 2 && computer == 3) {
-		cout << "당신은 바위를 냈고, 컴퓨터는 보자기를 냈습니다. - LOSE :(" << endl << endl;
-	}
-	else if (player == 3 && computer == 1) {
-		cout << "당신은 보자기를 냈고, 컴퓨터는 가위를 냈습니다. - LOSE :(" << endl << endl;
-	}
-	else if (player == 3 && computer == 2) {
-		cout << "당신은 보자기를 냈고, 컴퓨터는 바위를 냈습니다. - WIN !!" << endl << endl;
-	}
-	else if (player == 3 && computer == 3) {
-		cout << "당신은 보자기를 냈고, 컴퓨터는 보자기를 냈습니다. - DRAW" << endl << endl;
-	}
-	else {
-		cout << "허용하지 않는 값이네요. 게임을 종료합니다.";
-		return 0;
-	}
+
+	cout << matchCount << "번 시도해서 승리하였습니다." << endl << endl;
 
 	//문제 3
 	int level = 0, difficulty = 0;
@@ -87,9 +105,9 @@ int main()
 		difficulty = 2; //난이도 설정
 	}
 
-	int mobHP = 0, damage =0, minDamage = 0, maxDamage = 0, defense = 0, attackType = 0;
+	int mobHP = 0, damage = 0, minDamage = 0, maxDamage = 0, defense = 0, attackType = 0;
 
-	if (difficulty == 1) { 
+	if (difficulty == 1) {
 		defense = 30; //난이도에 따른 공격 면역
 	}
 	else if (difficulty == 2) {
@@ -108,7 +126,7 @@ int main()
 		}
 
 		cout << "남은 공격 횟수 : " << attackCount << endl;
-		
+
 		cout << endl << "1. 약공격" << endl << "2. 강공격" << endl << "3. 루드 버스터" << endl << endl;
 		cout << "기술을 선택해주세요. : ";
 		cin >> attackType;
@@ -161,7 +179,7 @@ int main()
 			}
 		}
 	}
-	
+
 	if (mobHP > 0) {
 		cout << "몬스터의 체력이 " << mobHP << "만큼 남아, 패배하였습니다." << endl;
 	}
