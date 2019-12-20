@@ -18,7 +18,7 @@ int main()
 	srand(time(NULL));
 
 	int player = 0, computer = 0, matchCount = 0;
-	bool isWin = false; //승리 체크 변수
+	bool isWin = false, firstGame = true; //isWin - 승리 체크, firstGame - 최초 게임 전용 문구 출력 변수
 	//1 : 가위
 	//2 : 바위
 	//3 : 보
@@ -27,9 +27,15 @@ int main()
 
 		computer = rand() % 3 + 1;
 
-		cout << "가위바위보 게임에 오신 것을 환영합니다. 무엇을 내시겠습니까?" << endl << endl;
-		cout << "1. 가위, 2. 바위, 3. 보자기 : ";
-
+		if (firstGame == true) { 
+			firstGame = false;
+			cout << "가위바위보 게임에 오신 것을 환영합니다. 무엇을 내시겠습니까?" << endl << endl;
+			cout << "1. 가위, 2. 바위, 3. 보자기 : ";
+		}
+		else {
+			cout << "게임을 계속 진행합니다. 무엇을 내시겠습니까?" << endl << endl;
+			cout << "1. 가위, 2. 바위, 3. 보자기 : ";
+		}
 		cin >> player;
 
 		if (player == 1 && computer == 1) {
