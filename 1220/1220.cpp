@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <time.h>
 
 using namespace std;
@@ -15,15 +15,16 @@ int main()
 	cout << endl;
 
 	//문제 2
+
 	srand(time(NULL));
 
 	int player = 0, computer = 0, matchCount = 0;
-	bool isWin = false;
+	bool isWin = false; //승리 체크 변수
 	//1 : 가위
 	//2 : 바위
 	//3 : 보
 
-	while (isWin == false) {
+	while (isWin == false) { //isWin 값이 true가 될 때까지 반복
 
 		computer = rand() % 3 + 1;
 
@@ -34,7 +35,7 @@ int main()
 
 		if (player == 1 && computer == 1) {
 			cout << "당신은 가위를 냈고, 컴퓨터는 가위를 냈습니다. - DRAW" << endl << endl;
-			matchCount += 1;
+			matchCount += 1; 
 		}
 		else if (player == 1 && computer == 2) {
 			cout << "당신은 가위를 냈고, 컴퓨터는 바위를 냈습니다. - LOSE :(" << endl << endl;
