@@ -36,6 +36,7 @@ int main()
 	cout << "과자 가격은 " << snackInfo.price << "원입니다." << endl;
 	cout << "과자 칼로리는 " << snackInfo.calories << "kcal입니다." << endl << endl;
 
+	//3.
 	student studentScore;
 	int sum = 0;
 
