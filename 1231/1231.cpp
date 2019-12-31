@@ -15,7 +15,7 @@ int main()
 	MonsterBase* MBase = new MonsterBase;
 
 	MBase->MonsterInfo();
-	mGame->openInformation();
+	mGame->openInformation(); //출력
 
 	delete MBase;
 

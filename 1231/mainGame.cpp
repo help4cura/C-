@@ -74,7 +74,6 @@ void mainGame::zombie()
 	cout << "레벨 : " << _zombie->getLevel() << endl << "체력 : " << _zombie->getHP() << endl << "공격력 : " << _zombie->getATK() << endl << "방어력 : " << _zombie->getDEF() << endl;
 }
 
-
 void mainGame::yeti()
 {
 	cout << _yeti->getName() << "의 정보" << endl;
