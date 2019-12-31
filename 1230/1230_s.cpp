@@ -6,7 +6,6 @@ using namespace std;
 
 int main()
 {
-
 	//포인터 - 주소 연산자(&)
 
 	int a;
@@ -26,14 +25,6 @@ int main()
 
 	printf("%d\n", *pa);
 	printf("%d", a);
-
-	//클래스
-
-
-
-
-
+	
 	return 0;
-
-
 }
