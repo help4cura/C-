@@ -21,10 +21,8 @@ public:
 	/*
 	string getName() { return ItemName; }
 	void setName(string name) { ItemName = name; }
-
 	string getDescription() { return ItemDescription; }
 	void setDescription(string description) { ItemDescription = description; }
-
 	int getPrice() { return ItemPrice; }
 	int setPrice(int price) { ItemPrice = price; }
 	*/

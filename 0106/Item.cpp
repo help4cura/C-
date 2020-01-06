@@ -13,7 +13,7 @@ void Item::Describe()
 	cout << "===============================================================================" << endl;
 	cout << "아이템 이름 : " << ItemName << endl;
 	cout << "아이템 설명 : " << ItemDescription << endl;
-	cout << "아이템 가격 : " << ItemPrice << endl ;
+	cout << "아이템 가격 : " << ItemPrice << endl;
 	cout << "===============================================================================" << endl << endl;
 }
 
@@ -34,4 +34,3 @@ int Item::Potion()
 
 	return ItemPrice;
 }
-
