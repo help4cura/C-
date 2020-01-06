@@ -9,5 +9,8 @@ int main()
 	Shop* shop = new Shop;
 
 	shop->Buying();
+	
+	delete item;
+	delete shop;
 
 }
