@@ -16,7 +16,13 @@ public:
 	void Describe();
 
 	int Sword();
-	int Potion();
+
+	int ElementalOrb();
+	int DimensionElementalOrb();
+
+	int PotionSmall();
+	int PotionMedium();
+	int PotionLarge();
 
 	/*
 	string getName() { return ItemName; }
@@ -31,6 +37,7 @@ private:
 
 	string ItemName;
 	string ItemDescription;
+	string Rare;
 	int ItemPrice;
 
 };
