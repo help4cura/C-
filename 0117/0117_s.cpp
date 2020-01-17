@@ -94,8 +94,13 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 		//LineTo(hdc, 200, 200);
 		//LineTo(hdc, 400, 400);
 
-		//Rectangle(hdc, 10, 10, 200, 200);
+		//사각형과 원
+		Rectangle(hdc, 10, 10, 200, 200);
 		Ellipse(hdc, 10, 10, 200, 200);
+
+		//HDC, X, Y, 문자열, 문자열의 길이
+		TextOut(hdc, 100, 50, "테스트", strlen("테스트"));
+
 
 
 		//페인트 종료
@@ -103,6 +108,23 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 	}
 		
 	break;
+
+	case WM_KEYDOWN:
+	{
+		switch (wParam)
+		{
+
+		case VK_LEFT:
+			break;
+
+		case VK_RIGHT:
+			break;
+
+		}
+
+		//지우고 새로고침
+		InvalidateRect(hwnd, NULL, true);
+	}
 
 	case WM_DESTROY:
 		PostQuitMessage(0);
