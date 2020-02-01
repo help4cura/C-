@@ -29,8 +29,7 @@ private:
 	//스피드
 	float SetSpeed[BOX_MAX];
 
-public:
-	
+public:	
 	HRESULT init();
 	void release();
 	void update();
