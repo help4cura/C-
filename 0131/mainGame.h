@@ -7,30 +7,26 @@
 
 struct TagBox
 {
-	RECT rc; //·ºÆ®
-	//bool isMole;	//ÀÌ³ğÀÌ µÎ´õÁö³Ä
-	//bool isDead;	//Á×¾ú³ª ¾È Á×¾ú³ª
-	bool isGameOver = false; //°ÔÀÓ¿À¹ö ÆÇ´Ü
-	int MutantChance; // µ¹¿¬º¯ÀÌ È®·ü
+	RECT rc; //RECT
+	bool isGameOver = false; //ê²Œì„ì˜¤ë²„ íŒë‹¨
+	int MutantChance; // ëŒì—°ë³€ì´ í™•ë¥ 
 };
 
 class mainGame : public gameNode
 {
 private:
-	//µÎ´õÁö ±¸Á¶Ã¼ ¼±¾ğ
+	//ë‘ë”ì§€ êµ¬ì¡°ì²´ ì„ ì–¸
 	TagBox _monster[BOX_MAX];
 	TagBox Player;
 
-	//¼±ÅÃµÈ µÎ´õÁö
-	//int _select[2];
-
-	//µô·¹ÀÌ¸¦ ÁÖ±â À§ÇÑ Ä«¿îÅÍ
+	//ë”œë ˆì´ë¥¼ ì£¼ê¸° ìœ„í•œ ì¹´ìš´í„°
 	int _count;
+	//ì ìˆ˜
 	int score = 0;
+	//ë©”ì‹œì§€ìš© ì €ì¥ ë³€ìˆ˜
 	CHAR str[128];
-	int r[BOX_MAX], g[BOX_MAX], b[BOX_MAX];
 
-	//½ºÇÇµå
+	//ìŠ¤í”¼ë“œ
 	float SetSpeed[BOX_MAX];
 
 public:
