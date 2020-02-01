@@ -9,7 +9,7 @@ struct TagBox
 {
 	RECT rc; //RECT
 	bool isGameOver = false; //게임오버 판단
-	int MutantChance; // 돌연변이 확률
+	int MutantChance; //돌연변이 확률
 };
 
 class mainGame : public gameNode
