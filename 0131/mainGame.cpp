@@ -1,15 +1,15 @@
 #include "setDefine.h"
 #include "mainGame.h"
 
-//ÃÊ±âÈ­ = WM_CREATE
+//ì´ˆê¸°í™” = WM_CREATE
 HRESULT mainGame::init()
 {
 	gameNode::init();
 
-	//µÎ´õÁö ¸¸µé±â
+	//ë‘ë”ì§€ ë§Œë“¤ê¸°
 	for (int i = 0; i < BOX_MAX; i++)
 	{
-		//µ¹¿¬º¯ÀÌ
+		//ëŒì—°ë³€ì´
 		_monster[i].MutantChance = RND->getFromIntTo(1, 777);
 
 		if (_monster[i].MutantChance == 1)
@@ -49,13 +49,13 @@ HRESULT mainGame::init()
 	return S_OK;
 }
 
-//¸Ş¸ğ¸®¿¡¼­ ÇØÁ¦
+//ë©”ëª¨ë¦¬ì—ì„œ í•´ì œ
 void mainGame::release()
 {
 	gameNode::release();
 }
 
-//½Ç½Ã°£ °»½Å
+//ì‹¤ì‹œê°„ ê°±ì‹ 
 void mainGame::update()
 {
 	gameNode::update();
@@ -149,23 +149,24 @@ void mainGame::update()
 	}
 }
 
-//ÀÌ¹ÌÁö ±×¸®±â
+//ì´ë¯¸ì§€ ê·¸ë¦¬ê¸°
 void mainGame::render(HDC hdc)
 {
 
-	//ÇÃ·¹ÀÌ¾î »ı¼º
+	//í”Œë ˆì´ì–´ ìƒì„±
 	RectangleMake(hdc, Player.rc);
 
 	HBRUSH brush = CreateSolidBrush(RGB(230, 35, 35));
 	FillRect(hdc, &Player.rc, brush);
 	DeleteObject(brush);
 
+	//í”Œë ˆì´ ë©”ì‹œì§€ ì¶œë ¥
 	wsprintf(str, TEXT("SCORE : %d"), score);
 	TextOut(hdc, WINSIZE_X / 2 - 50, 50,
 		str, strlen(str));
 
 
-	//¸ó½ºÅÍ »ı¼º - °ÔÀÓ ¿À¹ö°¡ ¾Æ´Ò ¶§
+	//ëª¬ìŠ¤í„° ìƒì„± - ê²Œì„ ì˜¤ë²„ê°€ ì•„ë‹ ë•Œ
 	if (Player.isGameOver == false) {
 
 		for (int i = 0; i < BOX_MAX; i++)
@@ -174,9 +175,9 @@ void mainGame::render(HDC hdc)
 		}
 	}
 	
-	//°ÔÀÓ ¿À¹ö ¸Ş½ÃÁö Ãâ·Â
+	//ê²Œì„ ì˜¤ë²„ ë©”ì‹œì§€ ì¶œë ¥
 	if (Player.isGameOver == true) {
 		TextOut(hdc, WINSIZE_X / 2 - 180, WINSIZE_Y / 2 - 50,
-			"°ÔÀÓ ¿À¹ö : Àç½ÃÀÛ ÇÏ·Á¸é ½ºÆäÀÌ½º Å°¸¦ ÀÔ·ÂÇÏ½Ã¿À.", strlen("°ÔÀÓ ¿À¹ö : Àç½ÃÀÛ ÇÏ·Á¸é ½ºÆäÀÌ½º Å°¸¦ ÀÔ·ÂÇÏ½Ã¿À."));
+			"ê²Œì„ ì˜¤ë²„ : ì¬ì‹œì‘ í•˜ë ¤ë©´ ìŠ¤í˜ì´ìŠ¤ í‚¤ë¥¼ ì…ë ¥í•˜ì‹œì˜¤.", strlen("ê²Œì„ ì˜¤ë²„ : ì¬ì‹œì‘ í•˜ë ¤ë©´ ìŠ¤í˜ì´ìŠ¤ í‚¤ë¥¼ ì…ë ¥í•˜ì‹œì˜¤."));
 	}
 }
